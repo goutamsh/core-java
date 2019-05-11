@@ -9,4 +9,19 @@
     
 2. Generics
 
+Java Streams reference:
+https://www.baeldung.com/java-8-streams
+
+To perform a sequence of operations over the elements of the data source and aggregate their results, three parts are needed – the source, intermediate operation(s) and a terminal operation.
+Intermediate operations return a new modified stream. 
+If more than one modification is needed, intermediate operations can be chained.
+
+A stream by itself is worthless, the real thing a user is interested in is a result of the terminal operation, which can be a value of some type or an action applied to every element of the stream. Only one terminal operation can be used per stream.
+
+The right and most convenient way to use streams are by a stream pipeline, which is a chain of stream source, intermediate operations, and a terminal operation.
+
+Intermediate operations are lazy. This means that they will be invoked only if it is necessary for the terminal operation execution.
+
+
+
 
