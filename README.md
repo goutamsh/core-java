@@ -1,16 +1,22 @@
 # Core Java Learning and Experimenting
 
 1. Java 8 features
+
     Streams
+    
     Functional interface
+    
     lambda
+    
     Method reference
+    
     Interface default and static methods
     
 2. Generics
 
-Java Streams reference:
-https://www.baeldung.com/java-8-streams
+## Java Streams :
+
+reference: https://www.baeldung.com/java-8-streams
 
 To perform a sequence of operations over the elements of the data source and aggregate their results, three parts are needed – the source, intermediate operation(s) and a terminal operation.
 Intermediate operations return a new modified stream. 
@@ -27,5 +33,9 @@ intermediate operations which reduce the size of the stream should be placed bef
 collect() method used to collect the result of stream. We can use some pre defines collectors using Collectors class.
 
 don’t leave an instantiated streams unconsumed as that will lead to memory leaks.
+
+## Java Lambda
+
+reference: http://www.tothenew.com/blog/functional-programming-in-java8-using-lambda-expressions/
 
 
