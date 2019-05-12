@@ -14,6 +14,16 @@
     
 2. Generics
 
+
+    https://www.baeldung.com/java-generics
+    
+    https://howtodoinjava.com/java/generics/complete-java-generics-tutorial/
+    
+Generics are required to force type safety in java language.
+
+Generics add stability to your code by making more of your bugs detectable at compile time.
+
+
 ## Java Streams :
 
 reference: https://www.baeldung.com/java-8-streams
