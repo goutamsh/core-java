@@ -22,6 +22,10 @@ The right and most convenient way to use streams are by a stream pipeline, which
 
 Intermediate operations are lazy. This means that they will be invoked only if it is necessary for the terminal operation execution.
 
+intermediate operations which reduce the size of the stream should be placed before operations which are applying to each element. So, keep such methods as skip(), filter(), distinct() at the top of your stream pipeline.
 
+collect() method used to collect the result of stream. We can use some pre defines collectors using Collectors class.
+
+don’t leave an instantiated streams unconsumed as that will lead to memory leaks.
 
 
