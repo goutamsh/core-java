@@ -48,4 +48,70 @@ don’t leave an instantiated streams unconsumed as that will lead to memory lea
 
 reference: http://www.tothenew.com/blog/functional-programming-in-java8-using-lambda-expressions/
 
+## Functional Interface 
+
+Functional Interface is interface with exactly one abstract method.
+
+It's annotated with @FunctionalInterface to avoid adding more than one abstract method, gives compile time error in that case.
+
+Lambdas work in Java 8 because of Functional interface. It can only be applied to Functional interface.
+
+ 
+## Method reference
+
+https://www.baeldung.com/java-method-references
+
+1. Static method reference
+
+2. Instance method of particular object
+
+3. Instance method reference of arbitrary object
+
+4. Constructor reference
+
+
+## Interface static and default methods
+
+----------------------------------------------------------------------------------------------------------
+
+## Java Collection Framework
+
+https://www.baeldung.com/java-collections
+
+### List
+##### ArrayList 
+
+##### LinkedList
+
+
+##### Vector
+
+##### CopyOnWriteArrayList
+
+##### Immutable ArrayList
+
+### Set
+##### HashSet
+
+##### LinkedHashSet
+
+##### TreeSet
+
+
+
+### Map
+##### HashMap
+
+##### LinkedHashMap
+
+##### TreeMap
+
+##### ConcurrentHashMap
+
+
+### Queue
+
+
+
+
 
