@@ -1,30 +1,9 @@
 # Core Java Learning and Experimenting
 
-1. Java 8 features
 
-    Streams
-    
-    Functional interface
-    
-    lambda
-    
-    Method reference
-    
-    Interface default and static methods
-    
-2. Generics
+## Java 8 Features
 
-
-    https://www.baeldung.com/java-generics
-    
-    https://howtodoinjava.com/java/generics/complete-java-generics-tutorial/
-    
-Generics are required to force type safety in java language.
-
-Generics add stability to your code by making more of your bugs detectable at compile time.
-
-
-## Java Streams :
+### Java Streams :
 
 reference: https://www.baeldung.com/java-8-streams
 
@@ -44,11 +23,11 @@ collect() method used to collect the result of stream. We can use some pre defin
 
 don’t leave an instantiated streams unconsumed as that will lead to memory leaks.
 
-## Java Lambda
+### Java Lambda
 
 reference: http://www.tothenew.com/blog/functional-programming-in-java8-using-lambda-expressions/
 
-## Functional Interface 
+### Functional Interface 
 
 Functional Interface is interface with exactly one abstract method.
 
@@ -57,7 +36,7 @@ It's annotated with @FunctionalInterface to avoid adding more than one abstract 
 Lambdas work in Java 8 because of Functional interface. It can only be applied to Functional interface.
 
  
-## Method reference
+### Method reference
 
 https://www.baeldung.com/java-method-references
 
@@ -70,36 +49,104 @@ https://www.baeldung.com/java-method-references
 4. Constructor reference
 
 
-## Interface static and default methods
+### Interface static and default methods
 
-----------------------------------------------------------------------------------------------------------
+
+## Generics
+
+
+[Ref 1](https://www.baeldung.com/java-generics)
+    
+[Ref 2](https://howtodoinjava.com/java/generics/complete-java-generics-tutorial/)
+    
+Generics are required to force type safety in java language.
+
+Generics add stability to your code by making more of your bugs detectable at compile time.
 
 ## Java Collection Framework
 
-https://www.baeldung.com/java-collections
+[Reference](https://www.baeldung.com/java-collections)
 
 ### List
+
+* Allows duplicates
+* Ordered collection based on index or insertion order
+
 ##### ArrayList 
+* Backed by Array 
+* Array size increases/decreases dynamically with adding/deleting elements
+* Methods are not **synchronized**
+* Random access time complexity is O(1)
+* Insertion/Deletion  time complexity is O(n)
+* Adding element amortised time complexity is O(1)
+* Searching an element in unordered list time complexity is O(n), Sorted list takes O(log n)
+* Best option if we access list more than modification, or no insertion/deletion between list
+* It's iterator is Fail fast, meaning it throws *ConcurrentModificationException* while iterate with iterator and list is modified outside iterator.
 
 ##### LinkedList
-
+* backed by doubly linked list data structure
+* Adding new element is just adding another node to the existing list
+* Random access takes time
+* Insertion/Deletion time complexity O(n) [ actually finding position takes time but adding deletion takes O(1) only]
+* Adding element time complexity is O(1)
+* Searching an element takes O(n) for unordered list
+* Best option when modification between list is more than random access
 
 ##### Vector
+* Same as ArrayList except few differences
+* All methods are **synchronized**
+* Part of legacy java collection
 
 ##### CopyOnWriteArrayList
-
+* Same as ArrayList except few differences listed below
+* It's thread safe
+* Creates new copy of the ArrayList when list is modified
+* It's iterator is fail safe, meaning doesn't throw *ConcurrentModificationException* when list is modified while iterating
+* Useful in multi-threaded environment where modification to list is less than access.
+* Iterator basically represents the snapshot of list at the time it was created.
+ 
 ##### Immutable ArrayList
+* ArrayList which can't be modified once created.
+* Can be created in different ways
+* Using Java Collections class
 
+```java
+List<String> list = Arrays.asList("ab", "cd", "ef");
+List<String> immutableList = Collections.unmodifiableList(list);
+```
+* Using Google Guava library
+```java
+List<String> list = Arrays.asList("ab", "cd", "ef");
+List<String> immutableList = ImmutableList.copyOf(list);
+```
+
+* Using Apache Collection Commons
+```java
+List<String> list = Arrays.asList("ab", "cd", "ef");
+List<String> immutableList = ListUtils.unmodifiableList(list);
+```
 ### Set
+* doesn't allow duplicate elements
+ 
 ##### HashSet
+* Unordered set backed by hashtable
+* Fast and less memory foot print compared to other set counterparts
+* The class of the element which need to be inserted into Set need to follow Equals and HashCode contract
+* 
+ 
 
 ##### LinkedHashSet
+* Ordered set which **maintains the order in which elements are inserted**
+* Takes some memory as it stored next and previous links
 
 ##### TreeSet
-
+* Ordered set where the **elements are sorted**
+* The elements which need to be inserted should implement Comparable interface (natural ordering) or Comparator need to be supplied while creating TreeSet
+ 
 
 
 ### Map
+* Key Value pair
 ##### HashMap
 
 ##### LinkedHashMap
