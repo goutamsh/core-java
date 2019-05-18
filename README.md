@@ -146,17 +146,28 @@ List<String> immutableList = ListUtils.unmodifiableList(list);
 
 
 ### Map
-* Key Value pair
+* Collection of Key-Value pair
 ##### HashMap
+* Un-ordered collection of Key-Value pairs
+* Methods are not **synchronized**
+* Fast and less memory foot print
+* Fail fast 
 
 ##### LinkedHashMap
+* Ordered collection of Key-Value pairs
+* Maintains the order of insertion
+* Takes more memory as compared to HashMap
 
 ##### TreeMap
+* Ordered collection of Key-Value pairs.
+* Keys are sorted based on the natural order or based on the Comparator provided at the time of creation.
 
 ##### ConcurrentHashMap
+* Thread safe HashMap
+* Doesn't throw *ConcurrentModificationException*
 
 
-### Queue
+#### Queue
 
 
 

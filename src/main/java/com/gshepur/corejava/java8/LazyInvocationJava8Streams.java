@@ -23,5 +23,6 @@ public class LazyInvocationJava8Streams {
         System.out.println(first);
 
 
+
     }
 }
