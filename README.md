@@ -142,6 +142,9 @@ List<String> immutableList = ListUtils.unmodifiableList(list);
 ##### TreeSet
 * Ordered set where the **elements are sorted**
 * The elements which need to be inserted should implement Comparable interface (natural ordering) or Comparator need to be supplied while creating TreeSet
+* The TreeSet uses a self-balancing binary search tree, more specifically a Red-Black tree.The TreeSet uses a self-balancing binary search tree, more specifically a Red-Black tree.
+* It’s not thread-safe
+* Operations like add, remove and search take O(log n) time while operations like printing n elements in sorted order require O(n) time.
  
 
 
@@ -149,7 +152,8 @@ List<String> immutableList = ListUtils.unmodifiableList(list);
 * Collection of Key-Value pair
 ##### HashMap
 * Un-ordered collection of Key-Value pairs
-* Methods are not **synchronized**
+* Backed by HashMap.
+* Methods are not **synchronized** and not thread safe.
 * Fast and less memory foot print
 * Fail fast 
 
